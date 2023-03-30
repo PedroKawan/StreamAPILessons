@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author PedroKawan
- *
- */
-module Map {
-}

@@ -4,15 +4,16 @@ import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
 public class Fc {
-	//Functions
+	//Convert a Integer number to Binary (0 | 1)
 	public static Function<Integer,String> toBinary =
 			x -> Integer.toBinaryString(x);
 			
-	//StringBuilder
+	//StringBuilder -> inverse the String
 	public static UnaryOperator<String> inverse = x -> {
 		return new StringBuilder(x).reverse().toString();
 	};
-			
+	
+	//Convert a Binary number to Integer
 	public static Function<String,Integer> toInteger = x -> {
 		String s = inverse.apply(x);
 		int number = 0;

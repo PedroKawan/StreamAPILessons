@@ -12,12 +12,15 @@ public class ISMain {
 		
 		print("-");
 		
+		//Use the 'has next?' method! to get the next element in list
 		Iterator<String> iterator = names.iterator();
 		while(iterator.hasNext()) {
 			System.out.println(iterator.next()); 
 		}
 		
+		
 		Stream<String> stream = names.stream();
+		
 		// Parallel Run.
 		Stream<String> stream2 = names.parallelStream();
 		

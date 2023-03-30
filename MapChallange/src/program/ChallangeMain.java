@@ -18,6 +18,7 @@ public class ChallangeMain {
 			.map(Integer::toBinaryString)
 			.forEach(System.out::println);
 		
+		//Convert to binary, and then, to Integer.
 		list.stream()
 		.map(Fc.toBinary)
 		.map(Fc.toInteger)
