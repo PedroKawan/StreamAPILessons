@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author PedroKawan
+ *
+ */
+module Map {
+}
