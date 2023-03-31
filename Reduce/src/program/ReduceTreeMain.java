@@ -16,18 +16,22 @@ public class ReduceTreeMain {
 		
 		List<Students> list = Arrays.asList(s1, s2, s3, s4, s5);
 		
+		//s == 'Pedro' and g == 'grade' of map{x -> x.getGrade()}
 		BiFunction<Students, Double, Students> doubleGrade = (s, g) -> {
 			s.setGrade(s.getGrade() + g);
 			return s;
 		};
 		
-		BinaryOperator<Students> newGrade = (s, os) -> os;
+		BinaryOperator<Students> newGrade = (s, os) -> s;
 		
 			list.stream()
 				.map(x -> x.getGrade())
 				.reduce((x, y) -> x + y)
-				.ifPresent(System.out::println);;
+				.ifPresent(System.out::println);
+				
 		
+		//Pedro is passed as a parameter, 'doubleGrade' adds the students' grades to Pedro's grade, 'newGrade' returns Pedro. 
+		//Pedro is the accumulator for the next Student's grades.
 		System.out.println(list.stream()
 			.map(x -> x.getGrade())
 			.reduce(s1, doubleGrade, newGrade).getGrade());
